@@ -1,0 +1,10 @@
+﻿Laptop|5000|2
+Tablet|3000|6
+Akilli Saat|1500|18
+Kulaklik|300|50
+Kamera|2000|8
+Masaustu Bilgisayar|7000|5
+Akilli Telefon|6000|8
+Yazici|1000|18
+Router|500|25
+Oyun Konsolu|4000|0

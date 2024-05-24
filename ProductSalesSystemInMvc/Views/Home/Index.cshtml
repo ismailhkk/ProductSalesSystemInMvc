@@ -1,0 +1,38 @@
+﻿@model List<Urun>
+
+
+    <h1>Ürün Satış Sistemi</h1>
+    <form method="post">
+        <div>
+        @foreach (var urun in Model)
+        {
+                        <div class="product">
+                            <h3>@urun.UrunAdı</h3>
+                            <p>Stok: @urun.Stok</p>
+                            <p>Fiyat: @urun.Fiyat TL</p>
+                            <input type="radio" name="urunAdi" value="@urun.UrunAdı" />
+                            <label for="@urun.UrunAdı">Seç</label>
+                        </div>
+        }
+        </div>
+        <div>
+            <label name="adet">Adet:</label>
+            <select  name="adet">
+            @for (int i = 1; i <= 10; i++)
+            {
+                            <option value="@i">@i</option>
+            }
+            </select>
+        </div>
+        <div>
+            <label name="odenenTutar">Ödenen Tutar:</label>
+            <input type="number"  name="odenenTutar"/>
+        </div>
+        <button type="checkbox">Satın Al</button>
+    </form>
+@if (ViewData["Hata"] != null)
+{
+                    <p>@Html.Raw(ViewData["Hata"])</p>
+}
+</ body>
+</html>
